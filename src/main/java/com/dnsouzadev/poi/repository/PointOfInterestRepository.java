@@ -14,5 +14,5 @@ public interface PointOfInterestRepository extends JpaRepository<PointOfInterest
             SELECT p FROM PointOfInterest p
             WHERE (p.x >= :xMin AND p.x <= :xMax AND p.y >= :yMin AND p.y <= :yMax)
             """)
-    List<PointOfInterest> findNear(@Param("xMin") Integer xMin, @Param("xMax") Integer xMax, @Param("yMin") Integer yMin, @Param("yMax") Integer yMax);
+    List<PointOfInterest> findNear(@Param("xMin") Long xMin, @Param("xMax") Long xMax, @Param("yMin") Long yMin, @Param("yMax") Long yMax);
 }
